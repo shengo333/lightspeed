@@ -64,7 +64,6 @@ const handleBuyClick = () => {
 
 .product-image {
   width: 100%;
-  height: 200px;
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 1rem;
