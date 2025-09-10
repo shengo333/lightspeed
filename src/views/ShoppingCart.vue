@@ -33,7 +33,7 @@
           </div>
           
           <div class="item-total">
-            {{ $t('cart.price', { price: item.price * item.quantity }) }}
+            {{ $t('cart.price', { price: (item.price * item.quantity).toFixed(2) }) }}
           </div>
           
           <button @click="removeFromCart(item.id)" class="delete-btn">

@@ -44,7 +44,8 @@ const cartItemCount = computed(() => {
 })
 
 const cartTotal = computed(() => {
-  return cartItems.value.reduce((total, item) => total + (item.price * item.quantity), 0)
+  const total = cartItems.value.reduce((total, item) => total + (item.price * item.quantity), 0)
+  return total.toFixed(2)
 })
 
 // Cart actions
