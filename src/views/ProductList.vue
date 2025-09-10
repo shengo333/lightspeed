@@ -25,20 +25,6 @@
           />
         </div>
       </section>
-
-      <!-- Products Section -->
-      <section v-if="products.length > 0" class="products-section">
-        <h2>{{ $t('productList.productsTitle') }}</h2>
-        <p>{{ $t('productList.foundProducts', { count: products.length }) }}</p>
-        <div class="products-grid">
-          <ProductCard 
-            v-for="product in products" 
-            :key="product.id" 
-            :product="product"
-            @buy="buyProduct"
-          />
-        </div>
-      </section>
     </div>
   </div>
 </template>
@@ -46,33 +32,23 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { getProducts, getCategories } from '../services/ecwidService'
-import type { EcwidProduct, EcwidCategory } from '../types/ecwid'
-import ProductCard from '../components/ProductCard.vue'
+import { getCategories } from '../services/ecwidService'
+import type { EcwidCategory } from '../types/ecwid'
 import CategoryCard from '../components/CategoryCard.vue'
 
 const router = useRouter()
 
 // Reactive state
-const products = ref<EcwidProduct[]>([])
 const categories = ref<EcwidCategory[]>([])
 const loading = ref(true)
 const error = ref<string | null>(null)
 
-// Load both products and categories
+// Load categories only
 const loadData = async () => {
   try {
     loading.value = true
     error.value = null
-    
-    // Load both products and categories in parallel
-    const [productsData, categoriesData] = await Promise.all([
-      getProducts(),
-      getCategories()
-    ])
-    
-    products.value = productsData
-    categories.value = categoriesData
+    categories.value = await getCategories()
   } catch (err: any) {
     error.value = err.message
   } finally {
@@ -83,13 +59,6 @@ const loadData = async () => {
 // Navigate to category details
 const viewCategory = (categoryId: number) => {
   router.push(`/category/${categoryId}`)
-}
-
-// Buy product function
-const buyProduct = (productId: number) => {
-  console.log('Buy product:', productId)
-  // TODO: Implement buy functionality
-  alert(`Product ${productId} added to cart!`)
 }
 
 // Load data on component mount
@@ -150,16 +119,8 @@ h2 {
   margin: 2rem 0;
 }
 
-/* Products Grid */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
 /* Sections */
-.categories-section, .products-section {
+.categories-section {
   margin-bottom: 3rem;
 }
 

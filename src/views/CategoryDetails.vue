@@ -39,7 +39,7 @@
             v-for="product in products" 
             :key="product.id" 
             :product="product"
-            @buy="buyProduct"
+            @click="viewProduct"
           />
         </div>
       </section>
@@ -93,7 +93,7 @@ const loadData = async () => {
 }
 
 const viewCategory = (newCategoryId: number) => router.push(`/category/${newCategoryId}`)
-const buyProduct = (productId: number) => alert(`Product ${productId} added to cart!`)
+const viewProduct = (productId: number) => router.push(`/product/${productId}`)
 
 // Lifecycle
 onMounted(loadData)

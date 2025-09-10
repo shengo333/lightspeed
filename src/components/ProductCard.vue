@@ -1,5 +1,5 @@
 <template>
-  <div class="product-card">
+  <div class="product-card" @click="handleCardClick">
     <div class="product-image">
       <img 
         :src="product.thumbnailUrl || product.imageUrl" 
@@ -9,7 +9,7 @@
     <div class="product-info">
       <h3 class="product-name">{{ product.name }}</h3>
       <p class="product-price">{{ $t('productList.price', { price: product.price }) }}</p>
-      <button class="buy-button" @click="handleBuyClick">
+      <button class="buy-button" @click.stop="handleBuyClick">
         {{ $t('productList.buyButton') }}
       </button>
     </div>
@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import type { EcwidProduct } from '../types/ecwid'
+import { useCart } from '../stores/cart'
 
 // Props
 interface Props {
@@ -25,15 +26,21 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+const { addToCart } = useCart()
 
 // Emits
 const emit = defineEmits<{
-  buy: [productId: number]
+  click: [productId: number]
 }>()
+
+// Handle card click (navigate to product details)
+const handleCardClick = () => {
+  emit('click', props.product.id)
+}
 
 // Handle buy button click
 const handleBuyClick = () => {
-  emit('buy', props.product.id)
+  addToCart(props.product)
 }
 </script>
 

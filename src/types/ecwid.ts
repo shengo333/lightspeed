@@ -4,6 +4,7 @@ export interface EcwidProduct {
   id: number
   name: string
   price: number
+  description?: string
   thumbnailUrl?: string
   imageUrl?: string
 }

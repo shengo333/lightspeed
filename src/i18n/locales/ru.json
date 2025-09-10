@@ -1,29 +1,38 @@
 {
   "nav": {
-    "productList": "Список товаров",
-    "product": "Товар",
+    "categories": "Категории",
+    "products": "Товары",
     "shoppingCart": "Корзина",
     "appName": "Lightspeed"
   },
   "productList": {
-    "title": "Товары и категории",
-    "loading": "Загрузка товаров и категорий...",
+    "title": "Категории",
+    "loading": "Загрузка категорий...",
     "error": "Ошибка: {error}",
     "retry": "Повторить",
     "categoriesTitle": "Категории",
-    "productsTitle": "Товары",
     "foundCategories": "Найдено {count} категорий",
-    "foundProducts": "Найдено {count} товаров",
     "price": "Цена: ${price}",
     "buyButton": "Купить"
   },
-  "product": {
-    "title": "Страница товара",
-    "description": "Это страница товара - здесь будут показаны детали отдельного товара"
+  "products": {
+    "title": "Товары",
+    "loading": "Загрузка товаров...",
+    "error": "Ошибка: {error}",
+    "retry": "Повторить",
+    "foundProducts": "Найдено {count} товаров"
   },
   "cart": {
-    "title": "Страница корзины",
-    "description": "Это страница корзины - здесь будут показаны добавленные в корзину товары"
+    "title": "Корзина",
+    "emptyMessage": "Ваша корзина пуста",
+    "continueShopping": "Продолжить покупки",
+    "price": "${price}",
+    "deleteButton": "Удалить",
+    "total": "Итого: ${total}",
+    "placeOrderButton": "Оформить заказ",
+    "orderSuccess": "Заказ успешно размещен!",
+    "orderSuccessMessage": "Спасибо за покупку! Ваш заказ был размещен.",
+    "closeButton": "Закрыть"
   },
   "categoryDetails": {
     "backToHome": "Назад к главной",
@@ -37,6 +46,15 @@
     "price": "Цена: ${price}",
     "buyButton": "Купить",
     "emptyCategory": "Эта категория пуста."
+  },
+  "productDetails": {
+    "backToHome": "Назад к главной",
+    "loading": "Загрузка деталей товара...",
+    "error": "Ошибка: {error}",
+    "retry": "Повторить",
+    "price": "${price}",
+    "buyButton": "Купить",
+    "noDescription": "Описание недоступно."
   },
   "common": {
     "loading": "Загрузка...",

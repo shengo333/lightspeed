@@ -1,29 +1,38 @@
 {
   "nav": {
-    "productList": "Product List",
-    "product": "Product",
+    "categories": "Categories",
+    "products": "Products",
     "shoppingCart": "Shopping Cart",
     "appName": "Lightspeed"
   },
   "productList": {
-    "title": "Products and Categories",
-    "loading": "Loading products and categories...",
+    "title": "Categories",
+    "loading": "Loading categories...",
     "error": "Error: {error}",
     "retry": "Retry",
     "categoriesTitle": "Categories",
-    "productsTitle": "Products",
     "foundCategories": "Found {count} categories",
-    "foundProducts": "Found {count} products",
     "price": "Price: ${price}",
     "buyButton": "Buy Now"
   },
-  "product": {
-    "title": "Product Page",
-    "description": "This is the product page - will show individual product details"
+  "products": {
+    "title": "Products",
+    "loading": "Loading products...",
+    "error": "Error: {error}",
+    "retry": "Retry",
+    "foundProducts": "Found {count} products"
   },
   "cart": {
-    "title": "Shopping Cart Page",
-    "description": "This is the shopping cart page - will show items added to cart"
+    "title": "Shopping Cart",
+    "emptyMessage": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "price": "${price}",
+    "deleteButton": "Delete",
+    "total": "Total: ${total}",
+    "placeOrderButton": "Place Order",
+    "orderSuccess": "Order Placed Successfully!",
+    "orderSuccessMessage": "Thank you for your purchase! Your order has been placed.",
+    "closeButton": "Close"
   },
   "categoryDetails": {
     "backToHome": "Back to Home",
@@ -37,6 +46,15 @@
     "price": "Price: ${price}",
     "buyButton": "Buy Now",
     "emptyCategory": "This category is empty."
+  },
+  "productDetails": {
+    "backToHome": "Back to Home",
+    "loading": "Loading product details...",
+    "error": "Error: {error}",
+    "retry": "Retry",
+    "price": "${price}",
+    "buyButton": "Buy Now",
+    "noDescription": "No description available."
   },
   "common": {
     "loading": "Loading...",
