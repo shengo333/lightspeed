@@ -13,7 +13,8 @@
     "categoriesTitle": "Категории",
     "foundCategories": "Найдено {count} категорий",
     "price": "Цена: ${price}",
-    "buyButton": "Купить"
+    "buyButton": "Купить",
+    "products": "товаров"
   },
   "products": {
     "title": "Товары",

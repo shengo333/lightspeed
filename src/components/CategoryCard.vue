@@ -2,7 +2,7 @@
   <div class="category-card" @click="handleClick">
     <div class="category-placeholder">
       <div class="category-icon">{{ isSubcategory ? '📂' : '📁' }}</div>
-      <span class="product-count">{{ category.productCount }} products</span>
+      <span class="product-count">{{ category.productCount }} {{ $t('categoryList.products') }}</span>
     </div>
     <div class="category-info">
       <h3 class="category-name">{{ category.name }}</h3>
@@ -49,7 +49,7 @@ const handleClick = () => {
 }
 
 .category-placeholder {
-  width: 100%;
+  /* width: 100%; */
   height: 150px;
   background: linear-gradient(135deg, #42b883, #369870);
   border-radius: 4px;

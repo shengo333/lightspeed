@@ -13,7 +13,8 @@
     "categoriesTitle": "Categories",
     "foundCategories": "Found {count} categories",
     "price": "Price: ${price}",
-    "buyButton": "Buy Now"
+    "buyButton": "Buy Now",
+    "products": "products"
   },
   "products": {
     "title": "Products",

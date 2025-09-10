@@ -42,10 +42,11 @@ const switchLanguage = (lang: string) => {
 
 <style scoped>
 .navbar {
-  background: #42b883;
+  background: #5d0016;
   color: white;
   padding: 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 .nav-container {
