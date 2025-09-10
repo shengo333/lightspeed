@@ -29,7 +29,7 @@
         <div class="product-price">
           {{ $t('productDetails.price', { price: product.price }) }}
         </div>
-        
+        <!-- i usually don't like this, but in this case it's necessary -->
         <div v-if="product.description" class="product-description" v-html="product.description"></div>
         <div v-else class="no-description">{{ $t('productDetails.noDescription') }}</div>
         

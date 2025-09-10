@@ -67,7 +67,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useCart } from '../stores/cart'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const { cartItems, cartTotal, updateQuantity, removeFromCart, clearCart } = useCart()
 const showOrderSuccess = ref(false)
 
@@ -78,6 +80,7 @@ const placeOrder = () => {
 
 const closeOrderSuccess = () => {
   showOrderSuccess.value = false
+  router.push('/')
 }
 </script>
 
