@@ -49,7 +49,7 @@ const switchLanguage = (lang: string) => {
 }
 
 .nav-container {
-width: 100vw;
+  width: 80vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
