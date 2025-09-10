@@ -18,14 +18,14 @@ const routes: RouteRecordRaw[] = [
     component: CategoryDetails
   },
   {
-    path: '/product/:id',
-    name: 'ProductDetails',
-    component: ProductDetails
-  },
-  {
     path: '/product',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/product/:id',
+    name: 'ProductDetails',
+    component: ProductDetails
   },
   {
     path: '/cart',
