@@ -1,21 +1,21 @@
 <template>
   <div class="product-list">
-    <h1>Product List</h1>
+    <h1>{{ $t('productList.title') }}</h1>
     
     <div v-if="loading">
-      Loading products...
+      {{ $t('productList.loading') }}
     </div>
     
     <div v-else-if="error" class="error">
-      <p>Error: {{ error }}</p>
-      <button @click="loadProducts">Retry</button>
+      <p>{{ $t('productList.error', { error }) }}</p>
+      <button @click="loadProducts">{{ $t('productList.retry') }}</button>
     </div>
     
     <div v-else>
-      <p>Found {{ products.length }} products</p>
+      <p>{{ $t('productList.found', { count: products.length }) }}</p>
       <div v-for="product in products" :key="product.id" class="product-item">
         <h3>{{ product.name }}</h3>
-        <p>Price: ${{ product.price }}</p>
+        <p>{{ $t('productList.price', { price: product.price }) }}</p>
       </div>
     </div>
   </div>
@@ -26,9 +26,9 @@ import { ref, onMounted } from 'vue'
 import { getProducts } from '../services/ecwidService'
 
 // Simple reactive state
-const products = ref([])
+const products = ref<any[]>([])
 const loading = ref(true)
-const error = ref(null)
+const error = ref<string | null>(null)
 
 // Load products function
 const loadProducts = async () => {
@@ -36,7 +36,7 @@ const loadProducts = async () => {
     loading.value = true
     error.value = null
     products.value = await getProducts()
-  } catch (err) {
+  } catch (err: any) {
     error.value = err.message
   } finally {
     loading.value = false

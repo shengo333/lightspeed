@@ -2,18 +2,22 @@
   <div id="app">
     <nav class="navbar">
       <div class="nav-container">
-        <h2 class="nav-logo">Vue App</h2>
+        <h2 class="nav-logo">{{ $t('nav.appName') }}</h2>
         <ul class="nav-menu">
           <li class="nav-item">
-            <RouterLink to="/" class="nav-link">Product List</RouterLink>
+            <RouterLink to="/" class="nav-link">{{ $t('nav.productList') }}</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/product" class="nav-link">Product</RouterLink>
+            <RouterLink to="/product" class="nav-link">{{ $t('nav.product') }}</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/cart" class="nav-link">Shopping Cart</RouterLink>
+            <RouterLink to="/cart" class="nav-link">{{ $t('nav.shoppingCart') }}</RouterLink>
           </li>
         </ul>
+        <div class="language-switcher">
+          <button @click="switchLanguage('en')" :class="{ active: locale === 'en' }">EN</button>
+          <button @click="switchLanguage('ru')" :class="{ active: locale === 'ru' }">RU</button>
+        </div>
       </div>
     </nav>
     
@@ -24,7 +28,14 @@
 </template>
 
 <script setup lang="ts">
-// No imports needed - RouterLink and RouterView are globally available
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
+
+const switchLanguage = (lang: string) => {
+  locale.value = lang
+  localStorage.setItem('locale', lang)
+}
 </script>
 
 <style scoped>
@@ -47,6 +58,31 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-switcher button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.language-switcher button.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
 }
 
 .nav-logo {

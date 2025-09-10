@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "productList": "Product List",
+    "product": "Product",
+    "shoppingCart": "Shopping Cart",
+    "appName": "Vue App"
+  },
+  "productList": {
+    "title": "Product List",
+    "loading": "Loading products...",
+    "error": "Error: {error}",
+    "retry": "Retry",
+    "found": "Found {count} products",
+    "price": "Price: ${price}"
+  },
+  "product": {
+    "title": "Product Page",
+    "description": "This is the product page - will show individual product details"
+  },
+  "cart": {
+    "title": "Shopping Cart Page",
+    "description": "This is the shopping cart page - will show items added to cart"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry"
+  }
+}
