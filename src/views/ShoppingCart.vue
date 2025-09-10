@@ -186,8 +186,6 @@ h1 {
 .quantity-btn {
   background: #f0f0f0;
   border: none;
-  width: 30px;
-  height: 30px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
