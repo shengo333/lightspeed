@@ -102,9 +102,11 @@ watch(() => route.params.id, loadData)
 
 <style scoped>
 .category-details {
-  padding: 2rem;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 200px);
 }
 
 .breadcrumb {
@@ -165,6 +167,40 @@ h2 {
   font-size: 1.1rem;
 }
 
+/* Responsive Design */
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .category-details {
+    padding: 2rem 1.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .category-details {
+    padding: 1.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .category-details {
     padding: 1rem;
@@ -173,6 +209,28 @@ h2 {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .category-details {
+    padding: 0.75rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem 0;
   }
 }
 </style>

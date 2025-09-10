@@ -84,9 +84,11 @@ onMounted(loadProduct)
 
 <style scoped>
 .product-details {
-  padding: 2rem;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 200px);
 }
 
 .breadcrumb {
@@ -194,7 +196,67 @@ onMounted(loadProduct)
   background: #369870;
 }
 
-/* Responsive */
+/* Responsive Design */
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .product-content {
+    gap: 3rem;
+  }
+  
+  .product-main-image {
+    max-width: 500px;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+  }
+  
+  .product-price {
+    font-size: 1.6rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .product-details {
+    padding: 2rem 1.5rem;
+  }
+  
+  .product-content {
+    gap: 2.5rem;
+  }
+  
+  .product-main-image {
+    max-width: 450px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .product-details {
+    padding: 1.5rem;
+  }
+  
+  .product-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .product-main-image {
+    max-width: 400px;
+  }
+  
+  .product-title {
+    font-size: 1.6rem;
+  }
+  
+  .product-price {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .product-details {
     padding: 1rem;
@@ -204,6 +266,7 @@ onMounted(loadProduct)
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 1rem 0;
+    text-align: center;
   }
   
   .product-title {
@@ -221,6 +284,42 @@ onMounted(loadProduct)
   .buy-button {
     width: 100%;
     min-width: auto;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .product-details {
+    padding: 0.75rem;
+  }
+  
+  .product-content {
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .product-price {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-main-image {
+    max-width: 250px;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .buy-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
   }
 }
 </style>
