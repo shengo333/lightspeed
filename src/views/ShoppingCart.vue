@@ -148,8 +148,6 @@ h1 {
 }
 
 .item-image {
-  width: 80px;
-  height: 80px;
   overflow: hidden;
   border-radius: 4px;
 }
