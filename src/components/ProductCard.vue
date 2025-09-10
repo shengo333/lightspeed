@@ -8,9 +8,9 @@
     </div>
     <div class="product-info">
       <h3 class="product-name">{{ product.name }}</h3>
-      <p class="product-price">{{ $t('productList.price', { price: product.price }) }}</p>
+      <p class="product-price">{{ $t('categoryList.price', { price: product.price }) }}</p>
       <button class="buy-button" @click.stop="handleBuyClick">
-        {{ $t('productList.buyButton') }}
+        {{ $t('categoryList.buyButton') }}
       </button>
     </div>
   </div>

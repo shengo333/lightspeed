@@ -5,7 +5,7 @@
     "shoppingCart": "Shopping Cart",
     "appName": "Lightspeed"
   },
-  "productList": {
+  "categoryList": {
     "title": "Categories",
     "loading": "Loading categories...",
     "error": "Error: {error}",
@@ -35,7 +35,7 @@
     "closeButton": "Close"
   },
   "categoryDetails": {
-    "backToHome": "Back to Home",
+    "backToCategories": "Categories",
     "loading": "Loading category details...",
     "error": "Error: {error}",
     "retry": "Retry",
@@ -48,7 +48,7 @@
     "emptyCategory": "This category is empty."
   },
   "productDetails": {
-    "backToHome": "Back to Home",
+    "backToCategories": "Categories",
     "loading": "Loading product details...",
     "error": "Error: {error}",
     "retry": "Retry",

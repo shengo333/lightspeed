@@ -2,7 +2,7 @@
   <div class="category-details">
     <!-- Breadcrumb -->
     <div class="breadcrumb">
-      <RouterLink to="/">{{ $t('categoryDetails.backToHome') }}</RouterLink>
+      <RouterLink to="/">{{ $t('categoryDetails.backToCategories') }}</RouterLink>
       <span> > {{ currentCategory?.name }}</span>
     </div>
 

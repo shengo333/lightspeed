@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import ProductList from '../views/ProductList.vue'
+import CategoryList from '../views/CategoryList.vue'
 import Product from '../views/Product.vue'
 import ProductDetails from '../views/ProductDetails.vue'
 import ShoppingCart from '../views/ShoppingCart.vue'
@@ -9,8 +9,8 @@ import CategoryDetails from '../views/CategoryDetails.vue'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'ProductList',
-    component: ProductList
+    name: 'CategoryList',
+    component: CategoryList
   },
   {
     path: '/category/:id',

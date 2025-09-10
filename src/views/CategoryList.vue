@@ -1,21 +1,21 @@
 <template>
-  <div class="products-categories-page">
-    <h1>{{ $t('productList.title') }}</h1>
+  <div class="category-list-page">
+    <h1>{{ $t('categoryList.title') }}</h1>
     
     <div v-if="loading" class="loading">
-      {{ $t('productList.loading') }}
+      {{ $t('categoryList.loading') }}
     </div>
     
     <div v-else-if="error" class="error">
-      <p>{{ $t('productList.error', { error }) }}</p>
-      <button @click="loadData">{{ $t('productList.retry') }}</button>
+      <p>{{ $t('categoryList.error', { error }) }}</p>
+      <button @click="loadData">{{ $t('categoryList.retry') }}</button>
     </div>
     
     <div v-else>
       <!-- Categories Section -->
       <section v-if="categories.length > 0" class="categories-section">
-        <h2>{{ $t('productList.categoriesTitle') }}</h2>
-        <p>{{ $t('productList.foundCategories', { count: categories.length }) }}</p>
+        <h2>{{ $t('categoryList.categoriesTitle') }}</h2>
+        <p>{{ $t('categoryList.foundCategories', { count: categories.length }) }}</p>
         <div class="categories-grid">
           <CategoryCard 
             v-for="category in categories" 
@@ -68,7 +68,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.products-categories-page {
+.category-list-page {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -137,7 +137,7 @@ h2 {
 
 /* Desktop */
 @media (min-width: 1024px) and (max-width: 1399px) {
-  .products-categories-page {
+  .category-list-page {
     padding: 2rem 1.5rem;
   }
   
@@ -149,7 +149,7 @@ h2 {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1023px) {
-  .products-categories-page {
+  .category-list-page {
     padding: 1.5rem;
   }
   
@@ -161,7 +161,7 @@ h2 {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .products-categories-page {
+  .category-list-page {
     padding: 1rem;
   }
   
@@ -173,7 +173,7 @@ h2 {
 
 /* Small Mobile */
 @media (max-width: 480px) {
-  .products-categories-page {
+  .category-list-page {
     padding: 0.75rem;
   }
   

@@ -5,7 +5,7 @@
     "shoppingCart": "Корзина",
     "appName": "Lightspeed"
   },
-  "productList": {
+  "categoryList": {
     "title": "Категории",
     "loading": "Загрузка категорий...",
     "error": "Ошибка: {error}",
@@ -35,7 +35,7 @@
     "closeButton": "Закрыть"
   },
   "categoryDetails": {
-    "backToHome": "Назад к главной",
+    "backToCategories": "Категории",
     "loading": "Загрузка деталей категории...",
     "error": "Ошибка: {error}",
     "retry": "Повторить",
@@ -48,7 +48,7 @@
     "emptyCategory": "Эта категория пуста."
   },
   "productDetails": {
-    "backToHome": "Назад к главной",
+    "backToCategories": "Категории",
     "loading": "Загрузка деталей товара...",
     "error": "Ошибка: {error}",
     "retry": "Повторить",

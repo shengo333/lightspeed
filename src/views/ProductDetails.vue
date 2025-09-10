@@ -2,7 +2,7 @@
   <div class="product-details">
     <!-- Breadcrumb -->
     <div class="breadcrumb">
-      <RouterLink to="/">{{ $t('productDetails.backToHome') }}</RouterLink>
+      <RouterLink to="/">{{ $t('productDetails.backToCategories') }}</RouterLink>
       <span> > {{ product?.name }}</span>
     </div>
 
