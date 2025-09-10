@@ -29,5 +29,31 @@ export const getProducts = async () => {
   }
 }
 
+/**
+ * Fetch categories
+ */
+export const getCategories = async () => {
+  try {
+    const response = await apiClient.get(getApiUrl('categories'))
+    return response.data.items
+  } catch (error) {
+    console.error('Error fetching categories:', error)
+    throw new Error('Failed to fetch categories')
+  }
+}
+
+/**
+ * Fetch products by category ID
+ */
+export const getProductsByCategory = async (categoryId: number) => {
+  try {
+    const response = await apiClient.get(getApiUrl(`products?category=${categoryId}`))
+    return response.data.items
+  } catch (error) {
+    console.error('Error fetching products by category:', error)
+    throw new Error('Failed to fetch products by category')
+  }
+}
+
 // Export the configured axios instance for future custom requests
 export { apiClient }

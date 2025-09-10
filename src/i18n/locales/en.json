@@ -3,15 +3,19 @@
     "productList": "Product List",
     "product": "Product",
     "shoppingCart": "Shopping Cart",
-    "appName": "Vue App"
+    "appName": "Lightspeed"
   },
   "productList": {
-    "title": "Product List",
-    "loading": "Loading products...",
+    "title": "Products and Categories",
+    "loading": "Loading products and categories...",
     "error": "Error: {error}",
     "retry": "Retry",
-    "found": "Found {count} products",
-    "price": "Price: ${price}"
+    "categoriesTitle": "Categories",
+    "productsTitle": "Products",
+    "foundCategories": "Found {count} categories",
+    "foundProducts": "Found {count} products",
+    "price": "Price: ${price}",
+    "buyButton": "Buy Now"
   },
   "product": {
     "title": "Product Page",
@@ -20,6 +24,19 @@
   "cart": {
     "title": "Shopping Cart Page",
     "description": "This is the shopping cart page - will show items added to cart"
+  },
+  "categoryDetails": {
+    "backToHome": "Back to Home",
+    "loading": "Loading category details...",
+    "error": "Error: {error}",
+    "retry": "Retry",
+    "subcategoriesTitle": "Subcategories",
+    "productsTitle": "Products",
+    "foundSubcategories": "Found {count} subcategories",
+    "foundProducts": "Found {count} products",
+    "price": "Price: ${price}",
+    "buyButton": "Buy Now",
+    "emptyCategory": "This category is empty."
   },
   "common": {
     "loading": "Loading...",

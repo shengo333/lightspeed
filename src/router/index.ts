@@ -3,12 +3,18 @@ import type { RouteRecordRaw } from 'vue-router'
 import ProductList from '../views/ProductList.vue'
 import Product from '../views/Product.vue'
 import ShoppingCart from '../views/ShoppingCart.vue'
+import CategoryDetails from '../views/CategoryDetails.vue'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'ProductList',
     component: ProductList
+  },
+  {
+    path: '/category/:id',
+    name: 'CategoryDetails',
+    component: CategoryDetails
   },
   {
     path: '/product',

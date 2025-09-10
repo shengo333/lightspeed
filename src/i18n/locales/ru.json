@@ -3,15 +3,19 @@
     "productList": "Список товаров",
     "product": "Товар",
     "shoppingCart": "Корзина",
-    "appName": "Vue Приложение"
+    "appName": "Lightspeed"
   },
   "productList": {
-    "title": "Список товаров",
-    "loading": "Загрузка товаров...",
+    "title": "Товары и категории",
+    "loading": "Загрузка товаров и категорий...",
     "error": "Ошибка: {error}",
     "retry": "Повторить",
-    "found": "Найдено {count} товаров",
-    "price": "Цена: ${price}"
+    "categoriesTitle": "Категории",
+    "productsTitle": "Товары",
+    "foundCategories": "Найдено {count} категорий",
+    "foundProducts": "Найдено {count} товаров",
+    "price": "Цена: ${price}",
+    "buyButton": "Купить"
   },
   "product": {
     "title": "Страница товара",
@@ -20,6 +24,19 @@
   "cart": {
     "title": "Страница корзины",
     "description": "Это страница корзины - здесь будут показаны добавленные в корзину товары"
+  },
+  "categoryDetails": {
+    "backToHome": "Назад к главной",
+    "loading": "Загрузка деталей категории...",
+    "error": "Ошибка: {error}",
+    "retry": "Повторить",
+    "subcategoriesTitle": "Подкатегории",
+    "productsTitle": "Товары",
+    "foundSubcategories": "Найдено {count} подкатегорий",
+    "foundProducts": "Найдено {count} товаров",
+    "price": "Цена: ${price}",
+    "buyButton": "Купить",
+    "emptyCategory": "Эта категория пуста."
   },
   "common": {
     "loading": "Загрузка...",
